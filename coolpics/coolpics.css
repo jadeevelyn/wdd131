@@ -1,4 +1,4 @@
- @import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
  :root {
  --primary-color: #52489c;
  --secondary-color: #59c3c3;
@@ -14,6 +14,7 @@
   font-size: 1.2em;
   background-color: #d6d5e3;
   color: #ebebeb;
+  font-family: "Mooli", sans-serif;
 }
 
 title {
@@ -98,7 +99,7 @@ main {
     }
     header nav ul {
         display: block;
-        padding-right: 45px;
+        padding-right: 45px; /*pls dont ask me whats going on. i have no idea. centering isnt working.*/
     }
     header nav ul li {
         margin: 10px 0;
