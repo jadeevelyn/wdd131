@@ -1,0 +1,175 @@
+@media (max-width: 600px) {
+  .recipe-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .recipe-card img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+.header-img {
+  width: 60px;
+  height: auto;
+}
+
+.header-text {
+  font-size: 36px;
+  font-family: "Courier New", monospace;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #aaa;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.search-button {
+    width: 50px;
+    height: 50px;
+}
+.search-button {
+  cursor: pointer;
+}
+.search-button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search-button img {
+  width: 24px;
+}
+
+.recipe-card {
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.recipe-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.recipe-card {
+  flex-wrap: wrap;
+}
+
+
+.recipe-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.recipe-description {
+  font-size: 15px;
+}
+
+.recipe-box {
+    display: flex;
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    border-radius: 8px; 
+    max-width: 600px;
+    margin: 0 auto; 
+}
+
+.recipe-box-img {
+    height: 200px; 
+    object-fit: cover; 
+    display: block;
+}
+
+.recipe-box-content {
+    padding-left: 20px; 
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+footer {
+    padding-left: 5px;
+} 
+
+
+/*.footer-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0; 
+} */
+
+.social {
+  display: flex;
+  gap: 10px;
+  justify-content: center; 
+  margin-top: 30px;
+}
+
+.social img {
+  width: 28px;
+}
+
+/*.footer-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0; 
+}*/
+
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items: center;           
+    }
+
+    .social {
+        order: 0;
+        margin-bottom: 0; 
+        
+}
