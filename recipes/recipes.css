@@ -146,6 +146,7 @@ footer {
   gap: 10px;
   justify-content: center; 
   margin-top: 30px;
+  padding-left: 500px;
 }
 
 .social img {
@@ -171,5 +172,6 @@ footer {
     .social {
         order: 0;
         margin-bottom: 0; 
+        padding-left: 500px;
         
 }
