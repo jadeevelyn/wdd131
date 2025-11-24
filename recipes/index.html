@@ -18,48 +18,34 @@
     </header>
     <main>
       <div class="search-bar">
-        <input type="text" placeholder="Find a recipe" class="search-input" />
-        <button class="search-button" aria-label="Search">
-          <img src="images/search.svg" alt="" />
-        </button>
+        <div class="search-input">
+          <input type="text" id="recipe-search-input" placeholder="Find a recipe" />
+        </div>
+        <div class="search-button">
+          <button id="search-button" aria-label="Search">
+            <img src="images/search.svg" alt="" />
+          </button>
+        </div>
       </div>
+      <hr />
 
-      <!-- <section class="recipe-list"></section> -->
-      <div class="recipe-box">
-        <div class="recipe-box-image-container">
-          <img
-            src="images/apple-crisp.jpg"
-            alt="Apple Crisp"
-            class="recipe-box-img"
-          />
-        </div>
-        <div class="recipe-box-content">
-          <span class="tag">dessert</span>
-          <a href="https://www.allrecipes.com/recipe/12409/apple-crisp-ii/"
-            ><h2 class="recipe-title">Apple Crisp</h2></a
-          >
-          <p>⭐⭐⭐⭐☆</p>
-          <p class="recipe-description">
-            This apple crisp recipe is a simple yet delicious fall dessert
-            that's great served warm with vanilla ice cream.
-          </p>
-          <span class="rating" role="img" aria-label="Rating: 4 out of 5">
-          </span>
-        </div>
-      </div>
-      <div class="social">
-        <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
-        <a href="#"
-          ><img src="images/instagram_icon.svg" alt="instagram icon"
-        /></a>
-        <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon" /></a>
-        <a href="#"
-          ><img src="images/pinterest_icon.svg" alt="pinterest icon"
-        /></a>
-      </div>
+      <section id="recipe-list-container"></section>
+
     </main>
     <footer>
       <div class="footer-container">
+        <div class="social">
+          <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+          <a href="#"
+            ><img src="images/instagram_icon.svg" alt="instagram icon"
+          /></a>
+          <a href="#"
+            ><img src="images/youtube_icon.svg" alt="youtube icon"
+          /></a>
+          <a href="#"
+            ><img src="images/pinterest_icon.svg" alt="pinterest icon"
+          /></a>
+        </div>
         <a
           href="https://www.flaticon.com/free-icons/recipe"
           title="recipe icons"
