@@ -1,0 +1,173 @@
+/* Color Palette */
+:root {
+  --orange: #f97b4e;
+  --purple: #a85bb4;
+  --pink: #c7086b;
+  --red: #b21441;
+  --dark: #222;
+  --light: #f8f8f8;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: var(--purple);
+  color: var(--white);
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  width: 50px;
+}
+.logo img{
+    height: 50px;
+  width: 50px;
+}
+nav .links a {
+  margin: 0 10px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+.idea-card {
+    width: 300px;        
+    margin: 0 auto;   
+}
+
+nav .links a:hover {
+  color: var(--orange);
+}
+
+.btn, .pitch-btn {
+  padding: 10px 20px;
+  background: var(--pink);
+  border: none;
+  color: var(--white);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: var(--orange);
+  color: var(--white);
+  height: 175px;
+}
+
+.hero button {
+  padding: 12px 26px;
+  border: none;
+  background: var(--purple);
+  color: var(--white);
+  border-radius: 8px;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  background: var(--white);
+}
+
+.stat-box {
+  background: var(--purple);
+  padding: 20px;
+  color: var(--white);
+  border-radius: 10px;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0px 3px 6px #0002;
+}
+
+.events {
+  padding: 40px;
+}
+
+.event-row {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.event-img {
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.playground {
+  padding: 40px;
+  background: var(--white);
+}
+.playground {
+    padding: 40px;
+    background: var(--white);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.idea-card {
+  height: 180px;
+  border-radius: 10px;
+  background: var(--pink);
+  margin-bottom: 20px;
+}
+
+.details-btn {
+  padding: 10px;
+  border: none;
+  background: var(--purple);
+  color: var(--white);
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.idea-buttons button {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+};
+
+.not-int {
+  background: var(--red);
+  color: var(--white);
+  align-items: center;
+}
+
+.yes-int {
+  background: var(--orange);
+  color: var(--white);
+}
