@@ -1,58 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mob Together Wireframes</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MobTogether</title>
+
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-    <div class="logo">
-        Mob Together
-        <img src="mobtogether.png" alt="logo">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="mobtogether.png" alt="" class="brand-icon">
+        <span class="brand-name">MobTogether</span>
+      </div>
+<!-- keeping this nav but deleting the labels because I couldn't figure out a way to delete them but keep the spacing right.-->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="#" class="nav-link"></a>
+        <a href="#" class="nav-link"></a>
+        <a href="#" class="nav-link"></a>
+      </nav>
+
+      <div class="auth">
+        <button class="btn btn-ghost">Sign In</button>
+        <button class="btn btn-gradient">Sign Up</button>
+      </div>
     </div>
+  </header>
 
-    <!-- <div class="links">
-        <a href="mobtogether/profile.html">Profile</a>
-        <a href="mobtogether/explore.html">Explore</a>
-        <a href="mobtogether/vote.html">Vote</a>
-        <a href="mobtogether/playground.html">Idea Playground</a>
-    </div> -->
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="tag">⚡ Weekly Activity Showdown</div>
 
-    <div class="buttons"> 
-        <button class="sign-up">Sign Up</button>
-        <button class="log-in">Log In</button>
-    </div>
+        <h1 class="hero-title">
+          Your Summer.<br>
+          Your Crew.<br>
+          Your Legacy.
+        </h1>
 
-</nav>
+        <p class="hero-sub">
+          Transform your experience into an epic adventure. Create unforgettable events, vote on wild ideas, and climb the leaderboards while building lasting friendships.
+        </p>
 
-<section class="hero">
-    <h1>Your Summer.<br>Your Crew.<br>Your Legacy.</h1>
-    <p>Made by YSA for YSA</p>
-    <button class="join-btn">Join The Game</button>
-</section>
+        <div class="hero-ctas">
+          <!--<button class="btn btn-primary">Join the Game →</button>-->
+          <a href="playground.html" class="btn btn-primary">Join The Game</a>
 
-<section class="stats">
-    <div class="stat-box"><strong>289</strong> active members</div>
-    <div class="stat-box"><strong>18</strong> Events This Month</div>
-    <div class="stat-box"><strong>32</strong> Ideas Pitched</div>
-    <div class="stat-box"><strong>12.5K</strong> points earned</div>
-</section>
-
-<section class="events">
-    <h2>Upcoming Events</h2>
-    <div class="event-row">
-        <div class="event-img">
-            <img src="hike.jpg" alt="Sunrise Hike">
+          <button class="btn btn-outline">Sign Up ✨</button>
         </div>
-        <div class="event-title">SUNRISE HIKE</div>
-        <div class="event-desc">A sunrise hike this Friday, leaving at 4 am. Roughly 3 hours.<br>18 People Going.</div>
-    </div>
-</section>
+      </div>
+    </section>
+  </main>
+  <section class="stats">
+  <div class="container stats-grid">
 
-<section id="playground" class="playground">
+    <div class="stat-box">
+      <h3>289</h3>
+      <p>Active Members</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>18</h3>
+      <p>Events This Month</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>32</h3>
+      <p>Ideas Pitched</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>12.5K</h3>
+      <p>Points Earned</p>
+    </div>
+
+  </div>
+</section>
+<section class="featured-event">
+
+  <div class="event-tag">🔥 This Week’s Hottest Event</div>
+
+  <div class="event-card">
+
+      <div class="event-image"></div>
+
+      <div class="event-content">
+          <h2 class="event-title">Sunrise Hike</h2>
+
+          <p class="event-desc">
+            Hike this Friday, leaving at 4am. Around 4 hours. Bring water, snacks, and warm clothes.
+          </p>
+
+          <div class="event-meta">
+              <p><strong>📅 Date:</strong>Friday</p>
+              <p><strong>⏰ Time:</strong> 4:00 AM</p>
+              <p><strong>📍 Location:</strong>TBD</p>
+          </div>
+
+          <button class="event-btn">View Details</button>
+      </div>
+
+  </div>
+
+</section>
+<footer class="cta-footer">
+  <h2>Ready to make this summer legendary?</h2>
+  <p>Join your crew, pitch ideas, vote on events, and build unforgettable memories.</p>
+  <a href="playground.html" class="footer-btn">Join The Game</a>
+
+  <div class="footer-bottom">
+    <p>Created by YSA for YSA © 2025</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
+
+
+
+<!--<section id="playground" class="playground">
     <h2>Discover Ideas</h2>
 
     <div class="idea-card"></div>
@@ -65,8 +135,6 @@
         <button class="not-int">Not Interested</button>
         <button class="yes-int">Interested</button>
     </div>
-</section>
+</section>-->
 
-<script src="script.js"></script>
-</body>
-</html>
+

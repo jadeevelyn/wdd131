@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idea Playground</title>
+  <link rel="stylesheet" href="playground.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">Mob Together</div>
+  <div class="links">
+    <a href="profile.html">Profile</a>
+    <a href="explore.html">Explore</a>
+    <a href="vote.html">Vote</a>
+    <a href="playground.html" class="active">Idea Playground</a>
+    <a href="signout.html">Sign Out</a>
+  </div>
+  <button class="btn">Pitch</button>
+</nav>
+
+<section class="playground-container">
+
+  <h1>Discover Ideas</h1>
+
+  <div class="idea-card">
+
+  <div class="card-inner">
+
+    <!-- FRONT OF CARD -->
+    <div class="card-front">
+      <div class="idea-img"></div>
+
+      <h2>Sunset Volleyball</h2>
+
+      <p class="details">
+        Cost: Free • Time: 7:00 PM • Location: Provo Beach Courts
+      </p>
+
+      <button class="full-details" id="showDetails">
+        Full Details
+      </button>
+
+      <div class="choice-buttons">
+        <button class="not-interested">Not Interested</button>
+        <button class="interested">Interested</button>
+      </div>
+    </div>
+
+    <!-- BACK OF CARD -->
+    <div class="card-back">
+      <h2>Full Details</h2>
+
+      <p>
+        Join us for a fun, casual volleyball evening as the sun sets!
+        Bring water, comfy clothes, and a good vibe.
+      </p>
+
+      <ul>
+        <li>📍 Provo Beach Courts</li>
+        <li>🕖 7:00 PM – 9:00 PM</li>
+        <li>💵 Cost: Free</li>
+        <li>👟 Bring: Shoes, sunscreen</li>
+        <li>🤝 Hosted by: East Provo YSA</li>
+      </ul>
+
+      <button class="back-btn" id="backBtn">Back</button>
+    </div>
+
+  </div>
+
+</div>
+
+
+</section>
+<script src="playground.js"></script>
+
+</body>
+</html>
