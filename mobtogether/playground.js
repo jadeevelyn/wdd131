@@ -31,36 +31,37 @@ const ideas = [
     info: "Free • 7 PM • Ruby Beach",
     details: `
       <ul>
-        <li>🏐 Casual games</li>
-        <li>🕖 7–9 PM</li>
-        <li>💵 Free</li>
+        <li>Casual games</li>
+        <li>7–9 PM</li>
+        <li>Free</li>
       </ul>
-    `,
-    img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+    `, 
+    img: "nick-wojtas-KgFpXagcIn0-unsplash.jpg"
   },
   {
     title: "Temple Trip",
     info: "Free • 6 PM • Seattle Temple",
     details: `
       <ul>
-        <li>🛕 Seattle Temple</li>
-        <li>🕕 6 PM</li>
-        <li>💵 Free</li>
+        <li>Seattle Temple</li>
+        <li>6 PM</li>
+        <li>Free</li>
+        <li>Bring your temple recommend</li>
       </ul>
     `,
-    img: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80"
+    img: "joe-cook-bntv2OJLpLk-unsplash.jpg"
   },
   {
     title: "Board Game Night",
     info: "$5 • 8 PM • Relief Society Room",
     details: `
       <ul>
-        <li>🎲 Games & snacks</li>
-        <li>🕗 8 PM</li>
-        <li>💵 $5</li>
+        <li>Games & snacks</li>
+        <li>8 PM</li>
+        <li>$5</li>
       </ul>
     `,
-    img: "https://images.unsplash.com/photo-3WceTBlUoMs?auto=format&fit=crop&w=900&q=80"
+    img: "robert-coelho-laNNTAth9vs-unsplash.jpg"
   }
 ];
 

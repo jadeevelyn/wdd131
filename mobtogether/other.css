@@ -1,0 +1,59 @@
+:root {
+  --orange: #f97b4e;
+  --purple: #a85bb4;
+  --hotpink: #c7086b;
+  --crimson: #b21441;
+  --white: #fff;
+  --dark: #111;
+}
+h1 {
+  padding-top: 100px;
+  font-size: 3rem;
+  margin: 0;
+  color: var(--dark);
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fafafa;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+nav .logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--hotpink);
+}
+
+nav .links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+nav .links .active {
+  color: var(--crimson);
+}
+
+nav .btn {
+  background: var(--hotpink);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
