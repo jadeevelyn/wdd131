@@ -1,78 +1,49 @@
-// GET ELEMENTS
-const card = document.querySelector(".idea-card");
-const showDetails = document.getElementById("showDetails");
-const backBtn = document.getElementById("backBtn");
-const notInterestedBtn = document.querySelector(".not-interested");
-const interestedBtn = document.querySelector(".interested");
+const POINTS_KEY = "mobTogetherPoints";
 
-// ---- FLIP CARD ----
-showDetails.addEventListener("click", () => {
-  card.classList.add("flipped");
-});
-
-backBtn.addEventListener("click", () => {
-  card.classList.remove("flipped");
-});
-
-
-// ---- SWIPE ANIMATION ----
-function loadNewCard() {
-  // Reset flip state
-  card.classList.remove("flipped");
-
-  // Reset swipe animations
-  card.classList.remove("swipe-left", "swipe-right");
-
-  // Fade in new card
-  card.classList.add("fade-in");
-
-  setTimeout(() => {
-    card.classList.remove("fade-in");
-  }, 500);
+function getPoints() {
+  return Number(localStorage.getItem(POINTS_KEY)) || 0;
 }
 
+function addPoints(amount) {
+  const newTotal = getPoints() + amount;
+  localStorage.setItem(POINTS_KEY, newTotal);
+  updatePointsUI();
+}
 
-// Not Interested → swipe left
-notInterestedBtn.addEventListener("click", () => {
-  card.classList.add("swipe-left");
+function updatePointsUI() {
+  document.querySelectorAll("[data-points-display]").forEach(el => {
+    el.textContent = `${getPoints()} Points`;
+  });
+}
 
-  setTimeout(() => {
-    loadNewCard();
-  }, 600);
-});
+if (!sessionStorage.getItem("loginBonusGiven")) {
+  addPoints(5);
+  sessionStorage.setItem("loginBonusGiven", "true");
+}
 
+const card = document.querySelector(".idea-card");
+const modal = document.getElementById("passModal");
+const closeModalBtn = document.getElementById("closeModal");
 
-// Interested → swipe right
-interestedBtn.addEventListener("click", () => {
-  card.classList.add("swipe-right");
-
-  setTimeout(() => {
-    loadNewCard();
-  }, 600);
-});
-// ===== PRELOADED IDEAS =====
 const ideas = [
   {
     title: "Sunset Volleyball",
-    info: "Cost: Free • Time: 7 PM • Location: Provo Beach Courts",
+    info: "Free • 7 PM • Ruby Beach",
     details: `
-      Join us for a fun, casual volleyball evening!
       <ul>
-        <li>📍 Provo Beach Courts</li>
+        <li>🏐 Casual games</li>
         <li>🕖 7–9 PM</li>
         <li>💵 Free</li>
-        <li>👟 Bring: Shoes, sunscreen</li>
       </ul>
     `,
     img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
   },
   {
     title: "Temple Trip",
-    info: "Cost: Free • Time: 6 PM • Location: Provo Temple",
+    info: "Free • 6 PM • Seattle Temple",
     details: `
-      Join us for a peaceful and uplifting temple trip!
       <ul>
-        <li>📍 Provo Temple</li>
+        <li>🛕 Seattle Temple</li>
         <li>🕕 6 PM</li>
         <li>💵 Free</li>
       </ul>
@@ -81,65 +52,69 @@ const ideas = [
   },
   {
     title: "Board Game Night",
-    info: "$5 • Time: 8 PM • Heritage Hall",
+    info: "$5 • 8 PM • Relief Society Room",
     details: `
-      Bring your competitive side!
       <ul>
-        <li>🎲 Games & Snacks provided</li>
+        <li>🎲 Games & snacks</li>
         <li>🕗 8 PM</li>
-        <li>💵 $5 entry</li>
+        <li>💵 $5</li>
       </ul>
     `,
-    img: "https://unsplash.com/photos/person-in-white-shirt-sitting-beside-table-with-puzzle-game-NrS53eUKgiE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      
+    img: "https://images.unsplash.com/photo-3WceTBlUoMs?auto=format&fit=crop&w=900&q=80"
   }
 ];
 
 let index = 0;
 
 function loadCard() {
-  const card = document.querySelector(".idea-card");
   const idea = ideas[index];
-
   card.querySelector(".idea-img").style.backgroundImage = `url("${idea.img}")`;
   card.querySelector(".card-front h2").textContent = idea.title;
-  card.querySelector(".card-front .details").textContent = idea.info;
-
-  card.querySelector(".card-back").innerHTML = `
-    <h2>${idea.title}</h2>
-    <p>${idea.details}</p>
-    <button class="back-btn" id="backBtn">Back</button>
-  `;
-  attachEvents();
-  card.classList.add("fade-in");
-  setTimeout(() => card.classList.remove("fade-in"), 500);
+  card.querySelector(".details").textContent = idea.info;
+  card.querySelector(".back-title").textContent = idea.title;
+  card.querySelector(".back-text").innerHTML = idea.details;
 }
 
 function swipe(direction) {
-  const card = document.querySelector(".idea-card");
+  card.classList.add(direction === "left" ? "swipe-left" : "swipe-right");
 
-  if (direction === "left") card.classList.add("swipe-left");
-  else card.classList.add("swipe-right");
   setTimeout(() => {
     card.classList.remove("swipe-left", "swipe-right", "flipped");
-    index++;
-    if (index >= ideas.length) index = 0;
-
+    index = (index + 1) % ideas.length;
     loadCard();
   }, 600);
 }
-function attachEvents() {
-  const card = document.querySelector(".idea-card");
-  const showBtn = document.getElementById("showDetails");
-  const backBtn = document.getElementById("backBtn");
-  const yesBtn = document.querySelector(".interested");
-  const noBtn = document.querySelector(".not-interested");
 
-  showBtn.onclick = () => card.classList.add("flipped");
-  backBtn.onclick = () => card.classList.remove("flipped");
+document.getElementById("showDetails").onclick = () =>
+  card.classList.add("flipped");
 
-  yesBtn.onclick = () => swipe("right");
-  noBtn.onclick = () => swipe("left");
-}
+document.getElementById("backBtn").onclick = () =>
+  card.classList.remove("flipped");
+
+document.querySelector(".interested").onclick = () => {
+  addPoints(1);
+  swipe("right");
+};
+
+document.querySelector(".not-interested").onclick = () =>
+  modal.classList.add("active");
+
+closeModalBtn.onclick = () =>
+  modal.classList.remove("active");
+
+document.querySelectorAll(".reason-btn").forEach(btn => {
+  btn.onclick = () => {
+    addPoints(1);
+    modal.classList.remove("active");
+    swipe("left");
+  };
+});
+
+document.querySelector(".submit-reason").onclick = () => {
+  addPoints(5);
+  modal.classList.remove("active");
+  swipe("left");
+};
+
+updatePointsUI();
 loadCard();
-      
