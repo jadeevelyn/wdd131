@@ -15,7 +15,7 @@ function spendPoints(amount) {
   if (current >= amount) {
     localStorage.setItem(POINTS_KEY, current - amount);
     updatePointsUI();
-    alert("Reward redeemed! 🎉");
+    alert("Reward redeemed!");
   }
 }
 
@@ -40,7 +40,7 @@ function spendPoints(cost) {
   if (currentPoints < cost) return;
 
   setPoints(currentPoints - cost);
-  alert("Reward redeemed! 🎉");
+  alert("Reward redeemed!");
 }
 
 function updateUI() {
